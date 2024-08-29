@@ -14,6 +14,7 @@
 		3FAC179D2C80BCEC00B12CB8 /* screenshotappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC179C2C80BCEC00B12CB8 /* screenshotappTests.swift */; };
 		3FAC17A72C80BCEC00B12CB8 /* screenshotappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC17A62C80BCEC00B12CB8 /* screenshotappUITests.swift */; };
 		3FAC17A92C80BCEC00B12CB8 /* screenshotappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC17A82C80BCEC00B12CB8 /* screenshotappUITestsLaunchTests.swift */; };
+		3FAC17B62C80C19B00B12CB8 /* ScreencaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC17B52C80C19B00B12CB8 /* ScreencaptureViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		3FAC17A22C80BCEC00B12CB8 /* screenshotappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = screenshotappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FAC17A62C80BCEC00B12CB8 /* screenshotappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = screenshotappUITests.swift; sourceTree = "<group>"; };
 		3FAC17A82C80BCEC00B12CB8 /* screenshotappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = screenshotappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3FAC17B52C80C19B00B12CB8 /* ScreencaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreencaptureViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				3FAC178E2C80BCEC00B12CB8 /* Assets.xcassets */,
 				3FAC17932C80BCEC00B12CB8 /* screenshotapp.entitlements */,
 				3FAC17902C80BCEC00B12CB8 /* Preview Content */,
+				3FAC17B52C80C19B00B12CB8 /* ScreencaptureViewModel.swift */,
 			);
 			path = screenshotapp;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FAC178D2C80BCEA00B12CB8 /* ContentView.swift in Sources */,
+				3FAC17B62C80C19B00B12CB8 /* ScreencaptureViewModel.swift in Sources */,
 				3FAC178B2C80BCEA00B12CB8 /* screenshotappApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
