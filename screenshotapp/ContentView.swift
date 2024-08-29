@@ -8,14 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var vm = ScreencaptureViewModel()
     var body: some View {
+        
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            ScrollView{
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 200, maximum: 300))]) {
+                    ForEach(vm.images, id:\.self){ image in
+                        Image(nsImage: image)
+                            .resizable()
+                            .scaledToFit()
+//                            .onDrag({NSItemProvider(object: image)})
+                            .draggable(image)
+                    }
+                }
+            }
+            
+            HStack {
+                Button("Full screenshot"){
+                    vm.takeScreenshot(for: .full)
+                }
+                Button("Window screenshot"){
+                    vm.takeScreenshot(for: .window)
+                }
+                Button("Area screenshot"){
+                    vm.takeScreenshot(for: .area)
+                }
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
