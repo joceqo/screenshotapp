@@ -11,20 +11,30 @@ struct ContentView: View {
     
     @StateObject var vm = ScreencaptureViewModel()
     var body: some View {
+        
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-            
-            ForEach(vm.images, id:\.self){ image in
-                Image(nsImage: image)
-                    .resizable()
-                    .scaledToFit()
+            ScrollView{
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 200, maximum: 300))]) {
+                    ForEach(vm.images, id:\.self){ image in
+                        Image(nsImage: image)
+                            .resizable()
+                            .scaledToFit()
+//                            .onDrag({NSItemProvider(object: image)})
+                            .draggable(image)
+                    }
+                }
             }
-            Button("Make a screenshot"){
-                vm.takeScreenshot()
-                
+            
+            HStack {
+                Button("Full screenshot"){
+                    vm.takeScreenshot(for: .full)
+                }
+                Button("Window screenshot"){
+                    vm.takeScreenshot(for: .window)
+                }
+                Button("Area screenshot"){
+                    vm.takeScreenshot(for: .area)
+                }
             }
             .padding()
         }
